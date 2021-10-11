@@ -6,12 +6,12 @@ function calculateDistances(lat,lon){
     return [dpulze,pyramid,klcc]
 }
 
-let ellocate = document.getElementById("locate")
+let elLocate = document.getElementById("locate")
 ellocate.addEventListener("click", function(){
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(function(position){
             let elLat = document.getElementById("lat")
-            let ellong = document.getElementById("long")
+            let elLong = document.getElementById("long")
             let elDpulze = document.getElementById("depulze")
             let elKlcc = document.getElementById("klcc")
             let elSunway = document.getElementById("sunway")
@@ -22,8 +22,8 @@ ellocate.addEventListener("click", function(){
             let distances = calculateDistances(userLat,userLong)
 
 
-            elLat.innerHTML = "Your latitude" + userLat
-            ellong.innerHTML = "Your longitude" + userLong
+            elLat.innerHTML = "Your latitude:" + userLat
+            elLong.innerHTML = "Your longitude:" + userLong
             elDpulze.innerHTML = "Distance to Dpulze, Cyberjaya is" + distances[0] +"km"
             elKlcc.innerHTML = "Distance to KLCC is" + distances[2] + "km"
             elSunway.innerHTML = "Distance to Sunway Pyramid is" + distances[1] + "km"
