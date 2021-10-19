@@ -1,5 +1,5 @@
 let refreshNowBtn = document.getElementById("refreshNow")
-refreshNowBtn.addEventListener("click", function () {
+refreshNowBtn.addEventListener("click", function() {
     GetBooking()
 })
 
