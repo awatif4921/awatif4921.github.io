@@ -8,15 +8,29 @@
     <title>FLOWER BOUQUET - Order Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
     <style>
         .textalign {
             text-align: center;
+        }
+
+        .text1 {
+            color: cornsilk;
+        }
+
+        .text2 {
+            color: mistyrose;
+        }
+
+        .textfont {
+            font-family: Pacifico;
+            font-size: 60px;
         }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid" style="background: rgb(9, 13, 17);">
         <div class="row">
             <div class="col">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,7 +40,8 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent"
+                        style="background: rgb(202, 199, 198);">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html">Home </a>
@@ -51,27 +66,29 @@
 
 
         <!--jumbotron-->
-        <div class="jumbotron jumbotron-fluid">
+        <div class="jumbotron jumbotron-fluid" style="background-color: rgba(233, 160, 229, 0.979);">
             <div class="container">
-                <h1 class="display-7">Order your favourite flower Now!!</h1>
+                <h1 class="display-7 textfont">Order your favourite flower Now!!</h1>
                 <p class="lead">Make your choice with your own preferences.. </p>
             </div>
         </div>
 
+        <button type="button" class="btn btn-secondary float-right" id="Ordernow"> Order</button>
+
         <!--form order-->
         <form>
-            <div class="form-group">
+            <div class="form-group text2">
                 <label for="customerName">Name</label>
                 <input type="text" class="form-control" id="customerName">
             </div>
-            <div class="form-group">
+            <div class="form-group text2">
                 <label for="customerNumber">Phone Number</label>
                 <input type="text" class="form-control" id="customerNumber" placeholder="+60">
-                <div class="form-group">
+                <div class="form-group text2">
                     <label for="customerAddress">Address</label>
                     <input type="text" class="form-control" id="customerAddress">
                 </div>
-                <div class="form-group">
+                <div class="form-group text2">
                     <label for="customerFlower">Flower</label>
 
                     <select class="form-control" id="customerFlower">
@@ -88,7 +105,7 @@
                     </select>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group text2">
                     <label for="customerBouquet">Bouquet</label>
 
                     <select class="form-control" id="customerBouquet">
@@ -99,12 +116,12 @@
 
                 </div>
 
-                <div class="form-group">
+                <div class="form-group text2">
                     <label for="bouquetQuantity">Quantity</label>
                     <input type="text" class="form-control" id="bouquetQuantity">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group text2">
                     <label for="addInfo">Additional Request</label>
                     <textarea class="form-control" id="addInfo" rows="3"></textarea>
                 </div>
@@ -112,9 +129,7 @@
     </div>
     </form>
 
-    <button type="button" class="btn btn-primary float-left" id="Ordernow"> Order</button>
-
-    <div class="container-fluid textalign" style="background: rgb(202, 199, 198);">
+    <div class="container-fluid textalign text1" style="background: rgb(9, 13, 17);">
         <h6 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"> @$% 2021 Flower Bouquet.
             All Rights Reserved</h6>
     </div>

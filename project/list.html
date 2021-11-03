@@ -8,14 +8,29 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Signika">
     <style>
         .textalign {
             text-align: center;
+            position: absolute;
+        }
+        .textfont {
+            font-family: Pacifico;
+            font-size: 60px;
+        }
+        .text1 {
+            color:cornsilk;
+        }
+        .font1 {
+            color:rgb(127, 173, 35);
+            font-size: 20px;
+            font-family:"Signika";
         }
     </style>
 </head>
 
-<body >
+<body style="background: black;" >
     <div class="container-fluid">
         <div class="row">
             <div class="col">
@@ -25,7 +40,7 @@
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="collapse navbar-collapse" id="navbarNav" style="background: rgb(202, 199, 198);">
                         <ul class="navbar-nav">
                             <li class="nav-item active">
                                 <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
@@ -51,8 +66,8 @@
     <!-- Jumbotron -->
     <div class="row">
         <div class="col">
-            <div class="jumbotron">
-                <h1 class="display-4"> You Order List </h1>
+            <div class="jumbotron" style="background-color: rgba(233, 160, 229, 0.979);">
+                <h1 class="display-4 textfont"> You Order List... </h1>
 
             </div>
         </div>
@@ -61,20 +76,20 @@
     <!--Booking List-->
     <div class="row">
         <div class="col">
-            <button type="button" class="btn btn-primary" id="refreshorder"> Refresh Order</button>
+            <button type="button" class="btn btn-secondary" id="refreshorder"> Refresh Order</button>
 
-            <table class="table table-striped" id="orderList">
+            <table class="table table-striped text1" id="orderList">
                 <thead>
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Phone Number</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Flower</th>
-                        <th scope="col">Bouquet</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Additional Request</th>
-                        <th scope="col">Task</th>
+                    <tr style="background: rgb(246, 233, 233);">
+                        <th scope="col" class="font1" >Id</th>
+                        <th scope="col" class="font1">Name</th>
+                        <th scope="col" class="font1">Phone Number</th>
+                        <th scope="col" class="font1">Address</th>
+                        <th scope="col" class="font1">Flower</th>
+                        <th scope="col" class="font1">Bouquet</th>
+                        <th scope="col" class="font1">Quantity</th>
+                        <th scope="col" class="font1">Additional Request</th>
+                        <th scope="col" class="font1">Task</th>
                     </tr>
 
                 </thead>
@@ -83,11 +98,6 @@
 
             </table>
         </div>
-    </div>
-
-    <div class="container-fluid textalign" style="background: rgb(202, 199, 198);">
-        <h6 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"> @$% 2021 Flower Bouquet.
-            All Rights Reserved</h6>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
