@@ -8,9 +8,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        .textalign {
+            text-align: center;
+        }
+    </style>
 </head>
 
-<body>
+<body >
     <div class="container-fluid">
         <div class="row">
             <div class="col">
@@ -43,30 +48,31 @@
         </div>
     </div>
 
-     <!-- Jumbotron -->
-     <div class="row">
+    <!-- Jumbotron -->
+    <div class="row">
         <div class="col">
             <div class="jumbotron">
                 <h1 class="display-4"> You Order List </h1>
-                
+
             </div>
         </div>
     </div>
 
-     <!--Booking List-->
-     <div class="row">
+    <!--Booking List-->
+    <div class="row">
         <div class="col">
-            <button type="button" class="btn btn-primary" id="refreshNow"> Refresh Now</button>
+            <button type="button" class="btn btn-primary" id="refreshorder"> Refresh Order</button>
 
-            <table class="table table-striped" id="OrderList">
+            <table class="table table-striped" id="orderList">
                 <thead>
                     <tr>
-                        <th scope="col">No</th>
+                        <th scope="col">Id</th>
                         <th scope="col">Name</th>
                         <th scope="col">Phone Number</th>
                         <th scope="col">Address</th>
-                        <th scope="col">Flower Name</th>
+                        <th scope="col">Flower</th>
                         <th scope="col">Bouquet</th>
+                        <th scope="col">Quantity</th>
                         <th scope="col">Additional Request</th>
                         <th scope="col">Task</th>
                     </tr>
@@ -74,9 +80,14 @@
                 </thead>
                 <tbody>
                 </tbody>
-                
+
             </table>
         </div>
+    </div>
+
+    <div class="container-fluid textalign" style="background: rgb(202, 199, 198);">
+        <h6 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"> @$% 2021 Flower Bouquet.
+            All Rights Reserved</h6>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

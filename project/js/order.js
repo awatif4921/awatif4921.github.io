@@ -1,6 +1,6 @@
-let OrderBtn = document.getElementById("Order")
-OrderBtn.addEventListener("click", function() {
-
+let OrdernowBtn = document.getElementById("Ordernow")
+OrdernowBtn.addEventListener("click", function(){
+  
   let customerName = document.getElementById("customerName")
   let customerNameVal = customerName.value
 
@@ -16,33 +16,39 @@ OrderBtn.addEventListener("click", function() {
   let customerBouquet = document.getElementById("customerBouquet")
   let customerBouquetVal = customerBouquet.value
 
+  let bouquetQuantity = document.getElementById("bouquetQuantity")
+  let bouquetQuantityVal = bouquetQuantity.value
+
   let addInfo = document.getElementById("addInfo")
   let addInfoVal = addInfo.value
 
-  Order(customerNameVal, customerNumberVal, customerAddressVal, customerFlowerVal,customerBouquetVal, addInfoVal)
+  Order(customerNameVal, customerNumberVal, customerAddressVal,  customerFlowerVal, customerBouquetVal, bouquetQuantityVal, addInfoVal)
+
 })
 
-function Order(customerName, customerNumber, customerAddress, customerFlower,customerBouquet, addInfo) {
-    let url = 'https://api.sheety.co/c6f30006dde50958665460ff609a5784/flowerBouquet/order';
-    let body = {
+function Order(customerName, customerNumber, customerAddress, customerFlower, customerBouquet, bouquetQuantity, addInfo){
+  let url = 'https://api.sheety.co/c6f30006dde50958665460ff609a5784/flowerBouquet/order';
+  let body = {
     order: {
       name: customerName,
-      phonenumber: customerNumber,
-      adress: customerAddress,
-      flowername: customerFlower,
-      NoBouquet: customerBouquet,
-      AdditionalRequest: addInfo
-
+      number: customerNumber,
+      address: customerAddress,
+      flower: customerFlower,
+      bouquet: customerBouquet,
+      quantity: bouquetQuantity,
+      additionalinfo: addInfo
     }
-}
-fetch(url, {
+  }
+  fetch(url, {
     method: 'POST',
-    body: JSON.stringify(body)
+    body: JSON.stringify(body),
+    headers: {
+      "Content-Type": "application/json"
+    }
   })
   .then((response) => response.json())
   .then(json => {
     // Do something with object
     console.log(json.order);
-  alert(json.order + "added in the list!")
-});
+  });
 }

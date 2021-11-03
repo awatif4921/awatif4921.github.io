@@ -8,6 +8,11 @@
     <title>FLOWER BOUQUET - Order Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        .textalign {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,14 +21,15 @@
             <div class="col">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <a class="navbar-brand" href="index.html">FLOWER BOUQUET</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="flowers.html">Flower</a>
@@ -42,59 +48,76 @@
             </div>
         </div>
 
-    </div>
 
-    <!--jumbotron-->
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-7">Order your favourite flower Now!!</h1>
-            <p class="lead">Make your choice with your own preferences.. </p>
-        </div>
-    </div>
 
-    <!--form order-->
-    <form>
-        <div class="form-group">
-            <label for="customerName">Name</label>
-            <input type="text" class="form-control" id="customerName">
-        </div>
-        <div class="form-group">
-            <label for="customerNumber">Phone Number</label>
-            <input type="text" class="form-control" id="customerNumber" placeholder="+60">
-        <div class="form-group">
-            <label for="customerAddress">Address</label>
-            <input type="text" class="form-control" id="customerAddress" >
-        </div>
-        <div class="form-group">
-            <label for="customerFlower">Flower Name</label>
-
-            <select class="form-control" id="customerFlower">
-                <option>Rose</option>
-                <option>Daisy</option>
-                <option>Sunflower</option>
-                <option>Baby's Breath</option>
-                <option>Tulip</option>
-                <option>Sapphire Hydrangea</option>
-                <option>Chamomile</option>
-                <option>Anemone</option>
-                <option>Peony</option>
-                <option>Orchid</option>
-            </select>
-
-            <div class="form-group">
-                <label for="customerBouquet">Number of Bouquet</label>
-                <input type="text" class="form-control" id="customerBouquet">
+        <!--jumbotron-->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-7">Order your favourite flower Now!!</h1>
+                <p class="lead">Make your choice with your own preferences.. </p>
             </div>
-
         </div>
 
-        <div class="form-group">
-            <label for="addInfo">Additional Request</label>
-            <textarea class="form-control" id="addInfo" rows="3"></textarea>
-        </div>
+        <!--form order-->
+        <form>
+            <div class="form-group">
+                <label for="customerName">Name</label>
+                <input type="text" class="form-control" id="customerName">
+            </div>
+            <div class="form-group">
+                <label for="customerNumber">Phone Number</label>
+                <input type="text" class="form-control" id="customerNumber" placeholder="+60">
+                <div class="form-group">
+                    <label for="customerAddress">Address</label>
+                    <input type="text" class="form-control" id="customerAddress">
+                </div>
+                <div class="form-group">
+                    <label for="customerFlower">Flower</label>
+
+                    <select class="form-control" id="customerFlower">
+                        <option>Rose</option>
+                        <option>Daisy</option>
+                        <option>Sunflower</option>
+                        <option>Baby's Breath</option>
+                        <option>Tulip</option>
+                        <option>Sapphire Hydrangea</option>
+                        <option>Chamomile</option>
+                        <option>Anemone</option>
+                        <option>Peony</option>
+                        <option>Orchid</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="customerBouquet">Bouquet</label>
+
+                    <select class="form-control" id="customerBouquet">
+                        <option>Hand Bouquet</option>
+                        <option>Flower Basket</option>
+                        <option>Bridal Hand-Bouquet</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="bouquetQuantity">Quantity</label>
+                    <input type="text" class="form-control" id="bouquetQuantity">
+                </div>
+
+                <div class="form-group">
+                    <label for="addInfo">Additional Request</label>
+                    <textarea class="form-control" id="addInfo" rows="3"></textarea>
+                </div>
+            </div>
+    </div>
     </form>
 
-    <button type="button" class="btn btn-primary float-right" id="Ordernow">Order</button>
+    <button type="button" class="btn btn-primary float-left" id="Ordernow"> Order</button>
+
+    <div class="container-fluid textalign" style="background: rgb(202, 199, 198);">
+        <h6 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"> @$% 2021 Flower Bouquet.
+            All Rights Reserved</h6>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
